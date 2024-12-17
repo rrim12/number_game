@@ -22,11 +22,13 @@ function play() {
     // console.log(userNum);
 
     if (userNum < 1 || userNum > 100) {
+        document.querySelector("#imgBox").src = "img/countdown.gif";
         result.textContent = "1부터 100까지의 숫자를 입력하세요";
         return;
     }
 
     if (history.includes(userNum)) {
+        document.querySelector("#imgBox").src = "img/countdown.gif";
         result.innerHTML =
             "이미 입력한 숫자입니다.<br>다른 숫자를 입력해주세요.";
         return;
@@ -52,9 +54,16 @@ function play() {
     console.log(history);
 
     if (chances < 1) {
-        gameOver = true;
-        result.textContent = "Game Over!";
-        document.querySelector("#imgBox").src = "img/game-over.gif";
+        if (userNum == computerNum) {
+            result.textContent = "BingGo!";
+            document.querySelector("#imgBox").src = "img/audiences.gif";
+            user.disabled = true;
+            playBtn.disabled = true;
+        } else {
+            gameOver = true;
+            result.textContent = "Game Over!";
+            document.querySelector("#imgBox").src = "img/game-over.gif";
+        }
     }
     if (gameOver == true) {
         playBtn.disabled = true;
