@@ -1,0 +1,17 @@
+@charset "utf-8";
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #222;
+    display: inline-block;
+}
+body {
+    color: #222;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>숫자맞추기게임</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="bg">
+            <div class="wrap">
+                <img src="img/game-console.png" alt="콘솔화면" />
+                <div class="game">
+                    <h3>숫자맞추기게임</h3>
+                    <div class="box">
+                        <img id="imgBox" src="img/countdown.gif" />
+                    </div>
+
+                    <div class="txt">
+                        <div id="result">결과화면 : up / down /bingo</div>
+                        <div id="chance">남은찬스 : 5번</div>
+                    </div>
+                    <input
+                        id="user"
+                        type="number"
+                        placeholder="1부터 100까지의 수"
+                        onkeypress="if (event.keyCode == 13) {play();}"
+                    />
+                    <!-- enter키코드값 13 -->
+                    <!-- 숫자만 넣을수있게 type을 숫자로 선언 -->
+                    <button id="play">입력</button>
+                    <button id="reset">재시작</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="custom.js"></script>
+    </body>
+</html>
+<!-- 
+1 html 요소 가져오기
+2 random수 만들기 1~100까지의 수
+3 play 함수 만들어서 사용자가 입력한 값을 가지고 옴
+4 시작버튼을 클릭했을 때 play함수를 호출함
+5 1부터100 사이의 수가 아니라면 1~100까지 숫자를 입려하세요 문구를 result에 나오게하기
+6 입력받은 수와 컴퓨터의 수를 비교해서 up, down, bingo를 만듦
+7 찬스를 1씩 감소시키고 5번의 기회가 다 끝나면 시작 버튼을 비활성화 시킴
+8 이미지도 up down bingo변경
+9 재시작버튼 클릭했을때 초기화 시킴
+user.value = ""
+chances = 5; 로 다시 바꿔줘야함
+result도 원래대로
+playbtn을 false로 
+이미지 원래대로
+컴퓨터 숫자 랜덤 다시시작
+10 input에 focus했을때 입력한 값이 지워지게 함
+11 숫자를 입력하고 enter로 눌렀을떄 play함수 호출 input
+12 입력한 숫자가 같으면 입력한숫자입니다. 다른 숫자를 입력해주세요
+12-1 입력한 숫자를 history배열에 넣음 push이용
+12-2 history  배열에 입력한 숫자가 있는지 확인 (incluses)
+만약 있으면  true 숫자가 없으면 false
+-->

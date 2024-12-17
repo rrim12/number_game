@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "bitbit";
+    src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"),
+        url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
+}
+@font-face {
+    font-family: "PFStardust";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "bitbit";
+    font-weight: lighter;
+    font-size: 25px;
+}
+.bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.wrap {
+    width: 700px;
+    text-align: center;
+    padding: 40px 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.wrap > img {
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(-20px);
+}
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h3 {
+    font-size: 50px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+.txt {
+    margin: 20px 0px;
+}
+#result {
+    margin-bottom: 10px;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* button {
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+        rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px,
+        rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+} */
+input {
+    height: 30px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: 2px solid #222;
+    font-family: "PFStardust";
+    font-weight: lighter;
+    box-sizing: border-box;
+}
+button {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04aa6d;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 7px #999;
+    font-family: "bitbit";
+    font-weight: lighter;
+}
+
+button:hover {
+    background-color: tomato;
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
