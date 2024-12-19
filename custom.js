@@ -51,7 +51,7 @@ function play() {
     chance.textContent = `남은찬스: ${chances}번`;
 
     history.push(userNum);
-    console.log(history);
+    // console.log(history);
 
     if (chances < 1) {
         if (userNum == computerNum) {
